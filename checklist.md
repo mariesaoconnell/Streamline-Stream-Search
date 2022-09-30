@@ -2,13 +2,12 @@
 
 Wire Frames:
 
-![](https://file%2B.vscode-resource.vscode-cdn.net/Users/mariesaoconnell/Desktop/GeneralAssembly/Unit2/Project%202/assets/2.png?version%3D1664478903073)
-
+![](assets/2.png)
 ## App.js
 
 App will contain:
 
-- Navigation - Home / About 
+- Navigation - Home / About
 - Form Component
 - <b>STRETCH GOAL:</b> Recently Searched Component
 
