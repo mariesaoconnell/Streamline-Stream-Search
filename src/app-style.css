@@ -1,0 +1,30 @@
+
+nav {
+  display: grid;
+  grid-template-columns: 1fr .2fr;
+  grid-template-rows: 1;
+  background-color: blueviolet;
+  width: 100%;
+
+}
+
+h1 {
+  grid-column: 1;
+  grid-row: 1;
+
+  /* H1 SPACING */
+  margin-left: 40px;
+}
+
+ul {
+  grid-column: 2;
+  grid-row: 1;
+
+  /* UL SPACING */
+  display: flex;
+  justify-content: space-evenly;
+}
+
+li {
+  display: inline;
+}
