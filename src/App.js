@@ -22,7 +22,7 @@ function App() {
   // const [newSearch, setNewSearch] = useState('');
 
   // LAST SEARCH
-  const [lastSearch, setLastSearch] = useState(initialState);
+  const [lastSearch, setLastSearch] = useState([]);
   const navigate = useNavigate();
 
     const options = {
@@ -46,7 +46,7 @@ function App() {
 				.then((response) => response.json())
 				.then((response) => {
           setResult((response.result)[0])
-          setLastSearch(search)
+          setLastSearch([...lastSearch, search])
           navigate('/results');
           setSearch(initialState)
         })
@@ -87,7 +87,7 @@ function App() {
 				/>
 
 				<Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home lastSearch={lastSearch} setLastSearch={setLastSearch}/>} />
           <Route path="/about" element={<About />} />
           <Route path="/results" element={<Result lastSearch={lastSearch} result={result} />}/>
 

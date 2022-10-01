@@ -1,9 +1,10 @@
 import React from 'react';
+import LastSearched from './homeComponents/LastSearched';
 
-function Home(props) {
+function Home({lastSearch}) {
   return (
     <div>
-      This is Home!
+      <LastSearched lastSearch={lastSearch}/>
     </div>
   );
 }

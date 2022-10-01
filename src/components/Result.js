@@ -1,4 +1,5 @@
 import React from 'react';
+import './styles/result.css'
 
 import Images from './resultComponents/Images';
 import Overview from './resultComponents/Overview';
