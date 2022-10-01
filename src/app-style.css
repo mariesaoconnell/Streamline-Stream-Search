@@ -15,6 +15,7 @@ h1 {
   grid-row: 1;
 
   /* H1 SPACING */
+  text-align: left;
   margin-left: 40px;
 }
 
@@ -29,4 +30,13 @@ ul {
 
 li {
   display: inline;
+}
+
+#poster{
+  max-width: 1400px;
+
+}
+#main-result-div{
+  margin: auto;
+  max-width: 1400px;
 }

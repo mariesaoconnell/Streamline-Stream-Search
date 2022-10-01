@@ -1,20 +1,30 @@
 import {useState, useEffect} from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom'
 import './styles/form.css'
 
 
-function Form({newSearch, handleChange, handleSubmit}) {
+function Form({search, handleSubmit, handleChange}) {
+  const navigate = useNavigate();
+  function goToResults(){
+    navigate('/results');
+  }
 
   return (
 		<div id='form-main-div'>
 			<h1 id='form-headline'>Streamline</h1>
 
 			<form onSubmit={handleSubmit}>
-				<input onChange={handleChange} type='text' value={newSearch} />
+				<input
+					placeholder='Search'
+					type='text'
+					name='searchString'
+					onChange={handleChange}
+					value={search}
+				/>
 
-				<Link to="/results">
+
 					<button type='submit'>Search</button>
-				</Link>
+
 			</form>
 		</div>
 	);
