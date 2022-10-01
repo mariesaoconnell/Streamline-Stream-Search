@@ -71,11 +71,13 @@ function App() {
   return (
 		<div className='app-main-div'>
 			<nav>
-				<h1>logo</h1>
-				<ul>
-					<Link to='/'>Home</Link>
-          <Link to='/about'>About</Link>
-				</ul>
+
+				<Link className='nav-item' to='/'>
+					Home
+				</Link>
+				<Link className='nav-item' to='/about'>
+					About
+				</Link>
 			</nav>
 
 			<main>
@@ -83,14 +85,21 @@ function App() {
 					handleChange={handleChange}
 					handleSubmit={handleSubmit}
 					search={search}
-          initialState={initialState}
+					initialState={initialState}
 				/>
 
 				<Routes>
-          <Route path="/" element={<Home lastSearch={lastSearch} setLastSearch={setLastSearch}/>} />
-          <Route path="/about" element={<About />} />
-          <Route path="/results" element={<Result lastSearch={lastSearch} result={result} />}/>
-
+					<Route
+						path='/'
+						element={
+							<Home lastSearch={lastSearch} setLastSearch={setLastSearch} />
+						}
+					/>
+					<Route path='/about' element={<About />} />
+					<Route
+						path='/results'
+						element={<Result lastSearch={lastSearch} result={result} />}
+					/>
 				</Routes>
 			</main>
 		</div>

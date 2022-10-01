@@ -12,7 +12,11 @@ function Form({search, handleSubmit, handleChange}) {
   return (
 		<div id='form-main-div'>
 			<h1 id='form-headline'>Streamline</h1>
-
+			<img
+				src='https://i.ibb.co/bH1Lm2w/Untitled-design-11.png'
+				alt='paperplane'
+				id='under-name'
+			/>
 			<form onSubmit={handleSubmit}>
 				<input
 					placeholder='Search'
@@ -22,9 +26,7 @@ function Form({search, handleSubmit, handleChange}) {
 					value={search}
 				/>
 
-
-					<button type='submit'>Search</button>
-
+				<button type='submit'>Search</button>
 			</form>
 		</div>
 	);

@@ -6,7 +6,7 @@ function Images({result}) {
   console.log(original);
 
   return (
-    <div>
+    <div id="img-div">
       <img id="original-poster" alt="original poster" src={original} />
     </div>
   );
