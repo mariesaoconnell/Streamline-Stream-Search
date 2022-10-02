@@ -6,7 +6,7 @@ import Images from './resultComponents/Images';
 import Overview from './resultComponents/Overview';
 import StreamingPlats from './resultComponents/StreamingPlats';
 import Header from './resultComponents/Header';
-import Cast from './resultComponents/Cast';
+
 
 function Result({ result }) {
 	function toggleEl() {
@@ -30,17 +30,13 @@ function Result({ result }) {
 		let parentList = document.querySelector('#cast-list');
 		let castArr = result.cast;
 
-		if (parentList.firstChild) {
-			while (parentList.firstChild) {
-				parentList.firstChild.remove();
-			}
-		} else {
+		if(parentList.firstChild) parentList.innerHTML = '';
+
 			for (let i = 0; i < castArr.length; i++) {
 				let listEl = document.createElement('li');
 				listEl.innerText = castArr[i];
 				parentList.appendChild(listEl);
-				console.log(castArr[i]);
-			}
+
 		}
 	}
 
@@ -61,6 +57,7 @@ function Result({ result }) {
 					Cast
 				</button>
 				<div className='content' id='cast-div'>
+
 					<ul id='cast-list'></ul>
 				</div>
 
