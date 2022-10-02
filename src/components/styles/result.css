@@ -1,3 +1,31 @@
 #original-poster{
   max-width: 1400px;
 }
+
+.collapsible {
+  background-color: rgba(134, 150, 197);
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 1000px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  margin: 0 auto;
+}
+
+.active,
+.collapsible:hover {
+  background-color: rgb(208, 217, 244);
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+  max-width: 965px;
+  margin: 0 auto;
+} 

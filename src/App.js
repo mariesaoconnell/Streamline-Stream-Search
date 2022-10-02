@@ -18,9 +18,6 @@ function App() {
   // RESULTS STATE
   const [result, setResult] = useState(initialState);
 
-  // // FORM STATE
-  // const [newSearch, setNewSearch] = useState('');
-
   // LAST SEARCH
   const [lastSearch, setLastSearch] = useState([]);
   const navigate = useNavigate();
@@ -33,10 +30,6 @@ function App() {
 			},
 		};
 
-		// useEffect(() => {
-		// 	fetchResults();
-		// }, []);
-
 		function fetchResults() {
 			//URL W SEARCH
 			const url = `https://streaming-availability.p.rapidapi.com/v2/search/title?title=${search}&country=us&type=all&output_language=en`;
@@ -46,7 +39,7 @@ function App() {
 				.then((response) => response.json())
 				.then((response) => {
           setResult((response.result)[0])
-          setLastSearch([...lastSearch, search])
+          setLastSearch([...lastSearch, result])
           navigate('/results');
           setSearch(initialState)
         })
@@ -54,7 +47,6 @@ function App() {
           console.error(`Error: ${err}`);
         });
 		}
-
 
 		// HANDLE SUBMIT FUNCTION
 		function handleSubmit(event) {
@@ -71,13 +63,8 @@ function App() {
   return (
 		<div className='app-main-div'>
 			<nav>
-
-				<Link className='nav-item' to='/'>
-					Home
-				</Link>
-				<Link className='nav-item' to='/about'>
-					About
-				</Link>
+				<Link className='nav-item' to='/'> Home </Link>
+				<Link className='nav-item' to='/about'> About </Link>
 			</nav>
 
 			<main>
@@ -91,11 +78,14 @@ function App() {
 				<Routes>
 					<Route
 						path='/'
-						element={
-							<Home lastSearch={lastSearch} setLastSearch={setLastSearch} />
-						}
+						element={<Home lastSearch={lastSearch} setLastSearch={setLastSearch}/>}
+						/>
+
+					<Route
+					path='/about'
+					element={<About />}
 					/>
-					<Route path='/about' element={<About />} />
+
 					<Route
 						path='/results'
 						element={<Result lastSearch={lastSearch} result={result} />}
