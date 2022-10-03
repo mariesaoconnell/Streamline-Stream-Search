@@ -8,23 +8,23 @@ function MoreInfo({result}) {
 
 				<p>
 					Type:
-            <span id='more-info-result'> {result.type}</span>
+            <span id='more-info-result'> { result.type ? `${result.type}` : "Unavailable" }</span>
 				</p>
 				<p>
 					Status:
-            <span id='more-info-result'> {result.status.statusText}</span>
+            <span id='more-info-result'> {result.type === 'series' ? `${result.status.statusText}` : "Unavailable"}</span>
 				</p>
 				<p>
 					Seasons:
-            <span id='more-info-result'>  {result.seasonCount}</span> |
+            <span id='more-info-result'>  {result.type === 'series' ? `${result.seasonCount}` : "Unavailable"}</span> |
 					Episode Count:
-					  <span id='more-info-result'>{result.episodeCount}</span>
+					  <span id='more-info-result'>{result.type === 'series' ? `${result.episodeCount}`: "Unavailable"}</span>
 				</p>
 				<p>
 					First Aired:
-            <span id='more-info-result'> {result.firstAirYear}</span> |
+            <span id='more-info-result'> {result.firstAirYear ? `${result.firstAirYear}` : "Unavailable"}</span> |
 					Last Aired:
-					  <span id='more-info-result'> {result.lastAirYear}</span>
+					  <span id='more-info-result'> {result.lastAirYear ? `${result.lastAirYear}` : "Unavailable"}</span>
 				</p>
 
 		</div>

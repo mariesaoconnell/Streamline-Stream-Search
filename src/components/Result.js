@@ -1,6 +1,5 @@
 import React from 'react';
 import './styles/result.css';
-import { useEffect } from 'react';
 
 import Images from './resultComponents/Images';
 import Overview from './resultComponents/Overview';
@@ -8,7 +7,10 @@ import StreamingPlats from './resultComponents/StreamingPlats';
 import Header from './resultComponents/Header';
 import MoreInfo from './resultComponents/MoreInfo';
 
-function Result({ result }) {
+
+function Result({ result, search}) {
+
+
 	function toggleEl() {
 		var coll = document.getElementsByClassName('collapsible');
 		var i;
@@ -30,22 +32,25 @@ function Result({ result }) {
 		let parentList = document.querySelector('#cast-list');
 		let castArr = result.cast;
 
-		if (parentList.firstChild) parentList.innerHTML = '';
+		if(parentList.firstChild) parentList.innerHTML = '';
 
-		for (let i = 0; i < castArr.length; i++) {
-			let listEl = document.createElement('li');
-			listEl.innerText = castArr[i];
-			parentList.appendChild(listEl);
+			for (let i = 0; i < castArr.length; i++) {
+				let listEl = document.createElement('li');
+				listEl.innerText = castArr[i];
+				parentList.appendChild(listEl);
+
 		}
 	}
 
 	return (
-		<div onLoad={toggleEl}>
+		<div onLoadCapture={toggleEl}>
 			<div id='main-result-div'>
 				<Header result={result} />
 				<Images result={result} />
 
-				<button className='collapsible'>Overview</button>
+				<button className='collapsible' >
+					Overview
+				</button>
 				<div className='content'>
 					<Overview result={result} />
 				</div>
@@ -57,13 +62,15 @@ function Result({ result }) {
 					<ul id='cast-list'></ul>
 				</div>
 
-				<button className='collapsible'>More Info</button>
+				<button className='collapsible'>
+					More Info
+				</button>
 				<div className='content'>
 					<MoreInfo result={result} />
 				</div>
 
 				<div>
-					<StreamingPlats result={result} />
+					<StreamingPlats result={result} search={search}/>
 				</div>
 			</div>
 		</div>

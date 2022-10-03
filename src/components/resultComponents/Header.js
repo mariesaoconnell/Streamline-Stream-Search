@@ -18,7 +18,7 @@ function Header({result}) {
   return (
     <div id="header-container">
       <div id="header-title-div">
-        Results for <em>{result.title}</em>
+        Results for <span id="header-title">{result.title}</span>
       </div>
 
       <div id="header-rating-div">

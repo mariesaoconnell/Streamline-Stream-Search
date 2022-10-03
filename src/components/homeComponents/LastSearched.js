@@ -4,7 +4,7 @@ import { scryRenderedComponentsWithType } from 'react-dom/test-utils';
 
 function LastSearched({lastSearch}) {
 
-  console.log({lastSearch})
+  // console.log({lastSearch})
 
   // useEffect(() =>{
   //   // loadContent();

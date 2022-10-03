@@ -6,7 +6,14 @@
 }
 
 #header-title-div{
-  font-size: 40px;
+  font-size: 30px;
+  color: white;
+  font-style: italic;
+}
+
+#header-title {
+  font-size: 50px;
+  font-weight: bold;
 }
 
 #rating-result {

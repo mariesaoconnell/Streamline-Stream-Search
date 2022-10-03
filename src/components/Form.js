@@ -5,9 +5,6 @@ import './styles/form.css'
 
 function Form({search, handleSubmit, handleChange}) {
   const navigate = useNavigate();
-  function goToResults(){
-    navigate('/results');
-  }
 
   return (
 		<div id='form-main-div'>
