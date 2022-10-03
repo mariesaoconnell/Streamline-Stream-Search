@@ -1,11 +1,40 @@
 import React from 'react';
-import { useState } from 'react';
+import '../styles/header.css';
 
 function Header({result}) {
 
+  function grabRating(){
+   let ratingArr = result.tmdbRating.toString().split('');
+
+   ratingArr.splice(1,0,'.')
+
+    return ratingArr.join('')
+  }
+
+  function grabVotes(){
+
+  }
+
   return (
-    <div>
-      <h2>Results for {result.title}</h2>
+    <div id="header-container">
+      <div id="header-title-div">
+        Results for <em>{result.title}</em>
+      </div>
+
+      <div id="header-rating-div">
+
+
+        <div id="rating-title">
+          IMDB Rating:
+        </div>
+
+        <div id="rating-result">
+          <span id="rating-num">{grabRating()}</span>/ 10
+        </div>
+
+
+      </div>
+
     </div>
   );
 }

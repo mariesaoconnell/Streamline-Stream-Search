@@ -6,7 +6,7 @@ import Images from './resultComponents/Images';
 import Overview from './resultComponents/Overview';
 import StreamingPlats from './resultComponents/StreamingPlats';
 import Header from './resultComponents/Header';
-
+import MoreInfo from './resultComponents/MoreInfo';
 
 function Result({ result }) {
 	function toggleEl() {
@@ -30,25 +30,22 @@ function Result({ result }) {
 		let parentList = document.querySelector('#cast-list');
 		let castArr = result.cast;
 
-		if(parentList.firstChild) parentList.innerHTML = '';
+		if (parentList.firstChild) parentList.innerHTML = '';
 
-			for (let i = 0; i < castArr.length; i++) {
-				let listEl = document.createElement('li');
-				listEl.innerText = castArr[i];
-				parentList.appendChild(listEl);
-
+		for (let i = 0; i < castArr.length; i++) {
+			let listEl = document.createElement('li');
+			listEl.innerText = castArr[i];
+			parentList.appendChild(listEl);
 		}
 	}
 
 	return (
-		<>
+		<div onLoad={toggleEl}>
 			<div id='main-result-div'>
 				<Header result={result} />
 				<Images result={result} />
 
-				<button className='collapsible' onClickCapture={toggleEl}>
-					Overview
-				</button>
+				<button className='collapsible'>Overview</button>
 				<div className='content'>
 					<Overview result={result} />
 				</div>
@@ -57,15 +54,19 @@ function Result({ result }) {
 					Cast
 				</button>
 				<div className='content' id='cast-div'>
-
 					<ul id='cast-list'></ul>
+				</div>
+
+				<button className='collapsible'>More Info</button>
+				<div className='content'>
+					<MoreInfo result={result} />
 				</div>
 
 				<div>
 					<StreamingPlats result={result} />
 				</div>
 			</div>
-		</>
+		</div>
 	);
 }
 

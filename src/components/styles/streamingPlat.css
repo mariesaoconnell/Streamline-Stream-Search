@@ -1,0 +1,9 @@
+#streaming-plat-list{
+  display: inline-flex;
+
+}
+
+#streaming-plat-list>li {
+  margin: 0 20px;
+  list-style-type: none;
+}
