@@ -2,21 +2,25 @@ import React from 'react';
 import '../styles/streamingPlat.css'
 import {useEffect} from 'react';
 
-function StreamingPlats({result, search}) {
+function StreamingPlats({result, lastSearch, search}) {
   const {streamingInfo} = result;
   const {us} = streamingInfo;
 
   useEffect(()=>{
 
-    return()=>{
-      fetchPlats();
+      return()=>{
+        fetchPlats();
+
     }
-  }, [search])
+  }, [result.title])
 
   function fetchPlats(){
     let platLis = document.querySelector('#streaming-plat-list');
 
-    if (platLis.firstChild) platLis.innerHTML = '';
+    if (platLis == undefined){
+      return
+    }
+    else if (platLis.firstChild) platLis.innerHTML = '';
     else {
       if(result.streamingInfo.us === undefined) {
         let newPlat = document.createElement('li');

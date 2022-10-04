@@ -4,7 +4,7 @@ import Result from './components/Result';
 import Home from './components/Home'
 import About from './components/About';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 // import {FetchPlats} from './components/Result/StreamingPlats.js'
 
@@ -90,7 +90,7 @@ function App() {
 
 					<Route
 						path='/results'
-						element={<Result search={search} result={result} />}
+						element={<Result lastSearch={lastSearch} search={search} result={result} />}
 					/>
 				</Routes>
 			</main>

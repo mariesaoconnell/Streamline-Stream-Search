@@ -8,7 +8,7 @@ import Header from './resultComponents/Header';
 import MoreInfo from './resultComponents/MoreInfo';
 
 
-function Result({ result, search}) {
+function Result({ lastSearch, result, search}) {
 
 
 	function toggleEl() {
@@ -70,7 +70,7 @@ function Result({ result, search}) {
 				</div>
 
 				<div>
-					<StreamingPlats result={result} search={search}/>
+					<StreamingPlats result={result} lastSearch={lastSearch} search={search}/>
 				</div>
 			</div>
 		</div>
