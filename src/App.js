@@ -4,7 +4,7 @@ import Result from './components/Result';
 import Home from './components/Home'
 import About from './components/About';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 // import {FetchPlats} from './components/Result/StreamingPlats.js'
 
@@ -20,6 +20,8 @@ function App() {
 
   // LAST SEARCH
   const [lastSearch, setLastSearch] = useState([]);
+
+
   const navigate = useNavigate();
 
     const options = {
@@ -80,7 +82,7 @@ function App() {
 				<Routes>
 					<Route
 						path='/'
-						element={<Home lastSearch={lastSearch} setLastSearch={setLastSearch}/>}
+						element={<Home search={search} result={result} lastSearch={lastSearch}/>}
 						/>
 
 					<Route

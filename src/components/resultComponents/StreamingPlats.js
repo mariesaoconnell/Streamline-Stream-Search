@@ -7,12 +7,8 @@ function StreamingPlats({result, lastSearch, search}) {
   const {us} = streamingInfo;
 
   useEffect(()=>{
-
-      return()=>{
         fetchPlats();
-
-    }
-  }, [result.title])
+  })
 
   function fetchPlats(){
     let platLis = document.querySelector('#streaming-plat-list');
@@ -20,8 +16,9 @@ function StreamingPlats({result, lastSearch, search}) {
     if (platLis == undefined){
       return
     }
-    else if (platLis.firstChild) platLis.innerHTML = '';
-    else {
+    else{
+      platLis.innerHTML = '';
+
       if(result.streamingInfo.us === undefined) {
         let newPlat = document.createElement('li');
         let noPlats = document.createElement('li');
@@ -39,7 +36,7 @@ function StreamingPlats({result, lastSearch, search}) {
         newPlat.appendChild(platAnchor);
         platLis.appendChild(newPlat);
       }
-     }
+    }
     }
   }
 
