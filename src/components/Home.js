@@ -1,23 +1,22 @@
-import React, { useEffect, useState } from 'react';
+import './styles/home.css'
+import Card from './homeComponent/Card';
+import CardList from './homeComponent/CardList';
 
 
-function Home({search, result, lastSearch}) {
-  const searchStorage = [];
-  const searchDiv = document.querySelector('#last-search-div');
-
-//   console.log(result)
-//  useEffect(()=>{
-//    let newDiv = document.createElement('div')
-//    newDiv.innerText=result.title;
-//    setTimeout(()=>{searchDiv.appendChild(newDiv);},2000)
-//  }, [search])
-
-
+function Home({lastSearch}) {
+console.log(lastSearch)
   return (
-    <div id="last-search-div">
-
-    </div>
-  );
+		<div>
+			<div>
+				<h2>
+					<em>Previously Searched</em></h2>
+			</div>
+			<div id='last-search-div'>
+				<CardList lastSearch={lastSearch} />
+			</div>
+		</div>
+	);
 }
 
-export default Home;
+
+  export default Home;

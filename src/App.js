@@ -4,7 +4,7 @@ import Result from './components/Result';
 import Home from './components/Home'
 import About from './components/About';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 // import {FetchPlats} from './components/Result/StreamingPlats.js'
 
@@ -40,8 +40,9 @@ function App() {
 			fetch(url, options)
 				.then((response) => response.json())
 				.then((response) => {
+					// setLastSearch([(response.result)[0]]);
+					lastSearch.unshift((response.result)[0]);
           setResult((response.result)[0])
-          setLastSearch([...lastSearch, result])
           setSearch(initialState)
           navigate('/results');
         })
@@ -60,7 +61,6 @@ function App() {
 		function handleChange(event) {
 			// set search to string input
 			setSearch(event.target.value);
-
 		}
 
 
@@ -82,7 +82,7 @@ function App() {
 				<Routes>
 					<Route
 						path='/'
-						element={<Home search={search} result={result} lastSearch={lastSearch}/>}
+						element={<Home lastSearch={lastSearch}/>}
 						/>
 
 					<Route

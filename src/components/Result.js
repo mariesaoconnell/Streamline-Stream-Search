@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './styles/result.css';
 
 import Images from './resultComponents/Images';
@@ -6,6 +6,7 @@ import Overview from './resultComponents/Overview';
 import StreamingPlats from './resultComponents/StreamingPlats';
 import Header from './resultComponents/Header';
 import MoreInfo from './resultComponents/MoreInfo';
+
 
 
 function Result({ lastSearch, result, search}) {
@@ -38,7 +39,6 @@ function Result({ lastSearch, result, search}) {
 				let listEl = document.createElement('li');
 				listEl.innerText = castArr[i];
 				parentList.appendChild(listEl);
-
 		}
 	}
 

@@ -11,9 +11,6 @@ function Header({result}) {
     return ratingArr.join('')
   }
 
-  function grabVotes(){
-
-  }
 
   return (
     <div id="header-container">
@@ -22,7 +19,6 @@ function Header({result}) {
       </div>
 
       <div id="header-rating-div">
-
 
         <div id="rating-title">
           IMDB Rating:
