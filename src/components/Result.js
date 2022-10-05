@@ -43,7 +43,7 @@ function Result({ lastSearch, result, search}) {
 	}
 
 	return (
-		<div onLoadCapture={toggleEl}>
+		<div id='result-container' onLoadCapture={toggleEl}>
 			<div id='main-result-div'>
 				<Header result={result} />
 				<Images result={result} />

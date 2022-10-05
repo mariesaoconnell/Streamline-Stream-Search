@@ -1,0 +1,14 @@
+#form-header-div{
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  margin-bottom: 5%;
+}
+
+#under-name{
+  object-fit: cover;
+  position: absolute;
+  top: 17%;
+  bottom: 90%;
+  left: 55%;
+}

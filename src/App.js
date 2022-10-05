@@ -67,7 +67,7 @@ function App() {
   return (
 		<div className='app-main-div'>
 			<nav>
-				<Link className='nav-item' to='/'> Home </Link>
+				<Link className='nav-item' to='/'><span id="home">Home</span> </Link>
 				<Link className='nav-item' to='/about'> About </Link>
 			</nav>
 

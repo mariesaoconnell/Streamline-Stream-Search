@@ -1,9 +1,35 @@
+#streaming-plat-div {
+  display: flex-inline;
+  margin: auto;
+  background-color: rgb(109, 120, 152);
+  width: 1000px;
+}
+
+h3{
+  padding: 30px;
+  text-align: left;
+}
+
 #streaming-plat-list{
   display: inline-flex;
-
+  padding: 10px ;
 }
 
 #streaming-plat-list>li {
   margin: 0 20px;
   list-style-type: none;
+  color: rgb(208, 217, 244);
+}
+
+#streaming-plat-list>li>a{
+  text-decoration: none;
+  color: rgb(168, 189, 255);
+  font-weight: bold;
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+#streaming-plat-list>li>a:hover{
+  color: rgb(208, 217, 244);
+  cursor: pointer;
 }

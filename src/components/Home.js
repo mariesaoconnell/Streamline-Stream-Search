@@ -7,7 +7,7 @@ function Home({lastSearch}) {
 console.log(lastSearch)
   return (
 		<div>
-			<div>
+			<div id="prev-search-div">
 				<h2>
 					<em>Previously Searched</em></h2>
 			</div>
