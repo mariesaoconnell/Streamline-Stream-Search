@@ -1,0 +1,30 @@
+#about-main-div {
+  margin-top: 50px;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: rgb(134, 150, 197);
+  display: grid;
+  grid-template-columns: .25fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+#about-img-div {
+  grid-row: 1;
+  grid-column: 1;
+  margin-right: 50%;
+}
+
+#content-container{
+  margin: auto;
+  margin-right: 10px;
+  grid-row: 1;
+  grid-column: 2;
+  height: 100%;
+  width: 80%;
+}
+
+p{
+  margin: 30px 20px;
+  font-size: 20px;
+}

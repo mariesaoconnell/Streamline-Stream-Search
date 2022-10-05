@@ -4,7 +4,7 @@ import Card from './Card';
 function CardList({lastSearch}) {
   return (
     <div>
-      <ul style={{listStyleType: "none"}}>
+      <ul id="last-search-list" style={{listStyleType: "none"}}>
         {
           lastSearch.map(lastSearched=>{
           return <Card lastSearched={lastSearched} key={lastSearched.title}/>

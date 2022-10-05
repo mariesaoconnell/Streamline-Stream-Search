@@ -11,7 +11,8 @@
   height: 400px;
   width: 400px;
 
-  background-color:rgb(116, 130, 172);
+  background-color:rgba(189, 203, 244);
+  font-size: 20px;
 
   display: grid;
   grid-template-columns: 1fr;
@@ -53,4 +54,10 @@
   text-align: left;
   margin: 20px;
   color: rgb(116, 130, 172);
+}
+
+#last-search-list{
+  display: inline-flex;
+  color: white;
+  font-weight: bold;
 }
