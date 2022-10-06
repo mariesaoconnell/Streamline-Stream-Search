@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react';
 import './styles/result.css';
 
 import Images from './resultComponents/Images';

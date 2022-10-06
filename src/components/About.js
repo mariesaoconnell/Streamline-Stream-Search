@@ -6,7 +6,7 @@ function About(props) {
   return (
 		<div id='about-main-div'>
 			<div id='about-img-div'>
-				<img src='https://i.ibb.co/gmx0tgV/boxing-day-icegif-13.gif' />
+				<img alt="Waving Hello" src='https://i.ibb.co/gmx0tgV/boxing-day-icegif-13.gif' />
 			</div>
 
 			<div id='content-container'>

@@ -1,10 +1,8 @@
-import {useState, useEffect} from 'react';
-import {Link, useNavigate} from 'react-router-dom'
+
 import './styles/form.css'
 import Header from './formComponent/Header';
 
 function Form({search, handleSubmit, handleChange}) {
-  const navigate = useNavigate();
 
   return (
 		<div id='form-main-div'>

@@ -13,7 +13,7 @@ function StreamingPlats({ result }) {
 	function fetchPlats() {
 		let platLis = document.querySelector('#streaming-plat-list');
 
-		if (platLis == undefined) {
+		if (platLis === undefined) {
 			return;
 		} else {
 			platLis.innerHTML = '';

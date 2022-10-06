@@ -1,10 +1,8 @@
 import './styles/home.css'
-import Card from './homeComponent/Card';
 import CardList from './homeComponent/CardList';
 
 
 function Home({lastSearch}) {
-console.log(lastSearch)
   return (
 		<div>
 			<div id="prev-search-div">
