@@ -9,6 +9,7 @@ import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 // import {FetchPlats} from './components/Result/StreamingPlats.js'
 
 function App() {
+	document.title = "Streamline"
 	const initialState = '';
 
 	// APP.JS STATE FOR INPUT
@@ -63,6 +64,7 @@ function App() {
 
 	return (
 		<div className='app-main-div'>
+
 			<nav>
 				<Link className='nav-item' to='/'>
 					<span id='home'>Home</span>{' '}
