@@ -1,3 +1,12 @@
 #more-info-result{
  font-style: italic;
 }
+
+@media only screen and (max-width: 800px) {
+  #more-info-div{
+
+  }
+  #more-info-div>p{
+    font-size: 15px;
+  }
+}

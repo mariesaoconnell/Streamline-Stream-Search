@@ -4,7 +4,7 @@
   display: inline-flex;
   height: 500px;
   width: 100%;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 #card-div {
@@ -60,4 +60,9 @@
   display: inline-flex;
   color: white;
   font-weight: bold;
+}
+
+#last-search-div {
+  max-width: 100%;
+  overflow-x: scroll;
 }

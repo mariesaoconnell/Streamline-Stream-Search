@@ -13,26 +13,20 @@ function Header({result}) {
 
 
   return (
-    <div id="header-container">
-      <div id="header-title-div">
-        Results for <span id="header-title">{result.title}</span>
-      </div>
+		<div id='header-container'>
+			<div id='header-title-div'>
+				Results for <span id='header-title'>{result.title}</span>
+			</div>
 
-      <div id="header-rating-div">
+			<div id='header-rating-div'>
+				<div id='rating-title'>IMDB Rating:</div>
 
-        <div id="rating-title">
-          IMDB Rating:
-        </div>
-
-        <div id="rating-result">
-          <span id="rating-num">{grabRating()}</span>/ 10
-        </div>
-
-
-      </div>
-
-    </div>
-  );
+				<div id='rating-result'>
+					<span id='rating-num'>{grabRating()}</span>/ 10
+				</div>
+			</div>
+		</div>
+	);
 }
 
 export default Header;

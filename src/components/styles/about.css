@@ -28,3 +28,20 @@ p{
   margin: 30px 20px;
   font-size: 20px;
 }
+
+@media only screen and (max-width: 800px) {
+  #about-main-div{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  #about-img-div>img{
+    width: 200px;
+  }
+
+  #content-container{
+    max-width: 100%;
+    margin: auto;
+  }
+
+}
