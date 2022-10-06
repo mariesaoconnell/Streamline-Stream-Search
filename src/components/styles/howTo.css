@@ -1,0 +1,10 @@
+#how-to-container {
+  height: 100px;
+  max-width: 100%;
+}
+
+#how-to-p{
+  padding-top: 30px;
+  font-weight: bold;
+  color: rgb(51, 74, 101);
+}
