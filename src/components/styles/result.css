@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Caviar Dreams";
+  src: url('/assets/caviar_dreams/CaviarDreams.ttf');
+}
+
 #original-poster{
   max-width: 1400px;
 }
@@ -18,6 +23,7 @@
   font-size: 20px;
   font-weight: bold;
   margin: 0 auto;
+  font-family: Caviar Dreams, Helvetica, sans-serif;
 }
 
 .active,
@@ -57,4 +63,3 @@ ul{
     margin:20px auto;
   }
 }
-

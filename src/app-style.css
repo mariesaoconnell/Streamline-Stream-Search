@@ -3,6 +3,11 @@
   src: url('../assets/hendangan/Hendangan.ttf');
 }
 
+@font-face {
+  font-family: "Caviar Dreams";
+  src: url('../assets/caviar_dreams/CaviarDreams.ttf');
+}
+
 body{
   height: 100vh;
   background-image: url('../assets/background.jpg');
@@ -10,7 +15,7 @@ body{
   background-size: cover;
   background-attachment: fixed;
   text-align: center;
-  font-family: Helvetica, sans-serif;
+  font-family: Caviar Dreams, Helvetica, sans-serif;
 }
 
 
