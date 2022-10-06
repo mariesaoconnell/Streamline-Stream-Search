@@ -3,10 +3,11 @@
   width: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: rgb(134, 150, 197);
+  background-color: rgba(110, 140, 174, 0.917);
   display: grid;
   grid-template-columns: .25fr 1fr;
   grid-template-rows: 1fr;
+  color: white;
 }
 
 #about-img-div {
@@ -22,6 +23,7 @@
   grid-column: 2;
   height: 100%;
   width: 80%;
+  padding-top: 20px;
 }
 
 p{

@@ -12,7 +12,7 @@
 }
 
 .collapsible {
-  background-color: rgba(134, 150, 197);
+  background-color:rgba(73, 98, 128);
   color: white;
   cursor: pointer;
   padding: 18px;
@@ -28,7 +28,7 @@
 
 .active,
 .collapsible:hover {
-  background-color: rgb(208, 217, 244);
+  background-color: rgb(105, 141, 185);
 }
 
 .content {
@@ -39,13 +39,16 @@
   background-color: #f1f1f1;
   max-width: 965px;
   margin: 0 auto;
-  color: black
+  color: black;
 }
 
 ul{
   list-style: none;
 }
 
+#cast-list>li{
+  font-size: 20px;
+}
 @media only screen and (max-width: 800px) {
   .content{
     max-width: 100%;

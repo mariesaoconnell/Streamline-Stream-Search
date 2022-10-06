@@ -1,6 +1,6 @@
 #last-search-div {
   z-index: 1;
-  background-color: rgba(134, 150, 197);
+  background-color: rgba(73, 98, 128);
   display: inline-flex;
   height: 500px;
   width: 100%;
@@ -11,7 +11,7 @@
   height: 400px;
   width: 400px;
 
-  background-color:rgba(189, 203, 244);
+  background-color:rgba(110, 140, 174);
   font-size: 20px;
 
   display: grid;
@@ -53,7 +53,8 @@
 #prev-search-div{
   text-align: left;
   margin: 20px;
-  color: rgb(116, 130, 172);
+  color: rgb(55, 79, 106);
+  font-weight: bolder;
 }
 
 #last-search-list{

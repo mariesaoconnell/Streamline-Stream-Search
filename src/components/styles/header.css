@@ -1,26 +1,37 @@
-
+/* *{
+  color: rgba(73, 98, 128);
+} */
 #header-container {
   width: 1000px;
   display: inline-flex;
   justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 #header-title-div{
   font-size: 30px;
-  color: white;
-  font-style: italic;
+  color: rgb(95, 92, 92);
+  font-weight: bold;
 }
 
 #header-title {
   font-size: 50px;
   font-weight: bold;
+  font-style: italic;
+  color: rgba(73, 98, 128);
 }
 
 #rating-result {
   font-size: 30px;
   font-weight: bold;
+  color: rgba(73, 98, 128);
 }
 
+#header-rating-div{
+  font-weight: bold;
+  color: rgba(73, 98, 128);
+}
 @media only screen and (max-width: 800px) {
   #header-container {
     max-width: 100%;
@@ -41,4 +52,3 @@
     font-size: 15px;
   }
 }
-

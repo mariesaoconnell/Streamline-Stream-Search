@@ -1,7 +1,7 @@
 #streaming-plat-div {
   display: flex-inline;
   margin: auto;
-  background-color: rgb(109, 120, 152);
+  background-color: rgba(73, 98, 128);
   width: 1000px;
 }
 
@@ -35,4 +35,3 @@ h3{
   color: rgb(208, 217, 244);
   cursor: pointer;
 }
-

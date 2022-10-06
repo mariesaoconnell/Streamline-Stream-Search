@@ -23,7 +23,7 @@ nav {
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(134, 150, 197, 0.917);
+  background-color: rgba(110, 140, 174, 0.917);
   width: 1200px;
   height: 75px;
 }
@@ -42,7 +42,7 @@ main{
   max-width: 1200px;
   min-height: 100vh;
   margin: auto;
-  background-color: rgba(189, 203, 244, 0.917);
+  background-color: rgba(158, 182, 208, 0.917);
 }
 
 h1 {

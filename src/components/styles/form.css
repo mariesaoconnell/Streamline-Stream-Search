@@ -36,7 +36,7 @@ form>input{
 form>button{
   color: white;
   font-weight: bold;
-  background-color: rgb(116, 130, 197);
+  background-color:rgba(73, 98, 128);
   height: 30px;
   width: 100px;
   margin: 20px;
@@ -44,6 +44,6 @@ form>button{
 }
 
 form>button:hover {
-  background-color: rgb(208, 217, 244);
+  background-color:rgb(105, 141, 185);
   cursor: pointer;
 }

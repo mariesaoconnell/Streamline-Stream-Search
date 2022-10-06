@@ -40,7 +40,7 @@ function StreamingPlats({ result }) {
 
 	return (
 		<div id='streaming-plat-div'>
-			<h3><em>Streaming Platforms</em></h3>
+			<h3>Streaming Platforms</h3>
 			<ul id='streaming-plat-list'></ul>
 		</div>
 	);
